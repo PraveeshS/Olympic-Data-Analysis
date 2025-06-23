@@ -38,9 +38,9 @@ import streamlit as st
 
 
 def geoplot(medal_tally):
-    world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+    world = gpd.read_file('data/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp')
 
-    world = world.merge(medal_tally, how='left', left_on='iso_a3', right_on='NOC')
+    world = world.merge(medal_tally, how='left', left_on='ADM0_A3', right_on='NOC')
 
    
     fig = px.choropleth_mapbox(
