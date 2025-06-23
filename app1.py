@@ -1,5 +1,4 @@
-import base64
-from tkinter import Image
+
 import streamlit as st
 import pandas as pd
 import preprocessor,helper
